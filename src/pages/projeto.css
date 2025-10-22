@@ -1,0 +1,163 @@
+/* Variáveis para cores */
+:root {
+    --cor-fundo-principal: #f9fafb; /* gray-50 */
+    --cor-fundo-cartao: #ffffff;
+    --cor-texto-titulo: #111827; /* gray-900 */
+    --cor-texto-principal: #374151; /* gray-700 */
+    --cor-alerta-problema: #dc2626; /* red-600 */
+    --cor-alerta-solucao: #16a34a; /* green-600 */
+    --cor-fundo-fluxograma-inicio: #eff6ff; /* blue-50 */
+    --cor-fundo-fluxograma-fim: #f0fff4; /* green-50, ajustado para um verde mais suave */
+    --cor-seta: #2563eb; /* blue-600 */
+  }
+  
+  /* Estilo do container principal */
+  .projeto-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-fundo-principal);
+    padding-top: 4rem; /* py-16 */
+    padding-bottom: 4rem; /* py-16 */
+  }
+  
+  /* Container de conteúdo */
+  .projeto-conteudo-max {
+    max-width: 80rem; /* max-w-7xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+  }
+  
+  /* Título principal */
+  .projeto-titulo {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700; /* font-bold */
+    color: var(--cor-texto-titulo);
+    margin-bottom: 3rem; /* mb-12 */
+    text-align: center;
+  }
+  
+  /* Estilo base para os cartões (Problema e Solução) */
+  .projeto-cartao {
+    background-color: var(--cor-fundo-cartao);
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    padding: 2rem; /* p-8 */
+    margin-bottom: 3rem; /* mb-12 */
+  }
+  
+  /* Cabeçalho do cartão (ícone + título) */
+  .projeto-cartao-cabecalho {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem; /* mb-6 */
+  }
+  
+  /* Título secundário (O Problema, A Solução) */
+  .projeto-cartao-titulo {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: var(--cor-texto-titulo);
+  }
+  
+  /* Ícones de alerta e check */
+  .projeto-icone-alerta,
+  .projeto-icone-solucao {
+    width: 2rem; /* w-8 */
+    height: 2rem; /* h-8 */
+    margin-right: 1rem; /* mr-4 */
+  }
+  .projeto-icone-alerta {
+    color: var(--cor-alerta-problema);
+  }
+  .projeto-icone-solucao {
+    color: var(--cor-alerta-solucao);
+  }
+  
+  /* Parágrafos de texto */
+  .projeto-paragrafo {
+    font-size: 1.125rem; /* text-lg */
+    color: var(--cor-texto-principal);
+    line-height: 1.625; /* leading-relaxed */
+    margin-bottom: 1.5rem; /* mb-6 ou mb-8, dependendo do contexto */
+  }
+  
+  /* Seção do Fluxograma (fundo colorido) */
+  .fluxograma-secao {
+    /* Adaptação do gradiente to-r from-blue-50 to-green-50 */
+    background: linear-gradient(to right, var(--cor-fundo-fluxograma-inicio), var(--cor-fundo-fluxograma-fim));
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 2rem; /* p-8 */
+  }
+  
+  /* Título do fluxograma */
+  .fluxograma-titulo {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    color: var(--cor-texto-titulo);
+    margin-bottom: 1.5rem; /* mb-6 */
+    text-align: center;
+  }
+  
+  /* Container dos elementos do fluxograma */
+  .fluxograma-passos-container {
+    display: flex;
+    flex-direction: column; /* flex-col (default) */
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* space-y-4 */
+  }
+  
+  /* Configuração para telas maiores (md) */
+  @media (min-width: 768px) {
+    .fluxograma-passos-container {
+      flex-direction: row; /* md:flex-row */
+      gap: 0;
+      margin-left: 2rem; /* md:space-x-8 - implementando com margin */
+      margin-right: 2rem; /* md:space-x-8 - implementando com margin */
+      /* Usando justify-content: space-between; ou gap para espaçar */
+    }
+  
+    .fluxograma-seta {
+      margin: 0 1rem; /* Espaço entre os blocos e as setas */
+    }
+  }
+  
+  /* Estilo do bloco de cada passo */
+  .fluxograma-bloco {
+    background-color: var(--cor-fundo-cartao);
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-md */
+    padding: 1.5rem; /* p-6 */
+    text-align: center;
+    min-width: 150px; /* min-w-[150px] */
+  }
+  
+  /* Título do bloco (nome da tecnologia) */
+  .fluxograma-bloco-titulo {
+    font-weight: 600; /* font-semibold */
+    color: var(--cor-texto-titulo);
+  }
+  
+  /* Subtítulo do bloco (descrição) */
+  .fluxograma-bloco-descricao {
+    font-size: 0.875rem; /* text-sm */
+    color: #4b5563; /* gray-600 */
+    margin-top: 0.5rem; /* mt-2 */
+  }
+  
+  /* Seta de fluxo */
+  .fluxograma-seta {
+    width: 2rem; /* w-8 */
+    height: 2rem; /* h-8 */
+    color: var(--cor-seta);
+    transform: rotate(90deg); /* rotate-90 */
+  }
+  
+  /* Configuração da seta para telas maiores */
+  @media (min-width: 768px) {
+    .fluxograma-seta {
+      transform: rotate(0deg); /* md:rotate-0 */
+    }
+  }
