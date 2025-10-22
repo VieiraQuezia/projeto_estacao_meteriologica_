@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/home';
 import Projeto from './pages/projeto';
 import Simulacao from './pages/simulacao';
 import './App.css';
@@ -14,7 +15,7 @@ export function AppRouter() {
         <Header />
         <main className="app-main">
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Home />} />
             <Route path="/projeto" element={<Projeto />} />
             <Route path="/simulacao" element={<Simulacao />} />
             {/* <Route path="/hardware" element={<Hardware />} />
