@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExternalLink, Cpu } from 'lucide-react';
 // Certifique-se de importar o seu arquivo CSS aqui:
-import './Simulacao.css'; 
+import './css/simulacao.css'; 
 import Wokwi from '/wokwi.png'
 
 export default function Simulacao() {

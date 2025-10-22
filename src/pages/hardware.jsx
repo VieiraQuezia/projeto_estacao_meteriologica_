@@ -1,6 +1,6 @@
 import React from 'react';
 import { Cpu, Thermometer, Wind, Zap, Cable } from 'lucide-react';
-import './hardware.css';
+import './css/hardware.css';
 
 export default function Hardware() {
   const components = [

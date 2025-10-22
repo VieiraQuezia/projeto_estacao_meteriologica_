@@ -1,7 +1,7 @@
 import React from 'react';
 import { AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 // Certifique-se de importar o seu arquivo CSS aqui:
-import './projeto.css'; 
+import './css/projeto.css'; 
 
 export default function Projeto() {
   return (  
