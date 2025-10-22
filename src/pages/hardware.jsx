@@ -58,7 +58,7 @@ export default function Hardware() {
             <img src={img} alt={name} className="card-img" />
             <div className="card-body">
               <header className="card-head">
-                <Icon className={`icon ${color}`} />
+                {/* <Icon className={`icon ${color}`} /> */}
                 <h3>{name}</h3>
               </header>
               <p>{desc}</p>
