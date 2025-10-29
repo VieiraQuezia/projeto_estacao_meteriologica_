@@ -1,13 +1,17 @@
 import React from 'react';
+import { Router } from 'lucide-react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Header from './components/header';
 import Footer from './components/footer';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Projeto from './pages/projeto';
 import Simulacao from './pages/simulacao';
 import Hardware from './pages/hardware';
+
+import Equipe from './pages/equipe';
 import './App.css';
-import { Router } from 'lucide-react';
+
 
 export function AppRouter() {
   return (
@@ -22,8 +26,8 @@ export function AppRouter() {
             <Route path="/hardware" element={<Hardware />} />
             {/* <Route path="/software" element={<Software />} />
             <Route path="/perguntas" element={<Perguntas />} />
-            <Route path="/resultados" element={<Resultados />} />
-            <Route path="/equipe" element={<Equipe />} /> */}
+            <Route path="/resultados" element={<Resultados />} />*/}
+            <Route path="/equipe" element={<Equipe />} /> 
           </Routes>
         </main>
         <Footer />
