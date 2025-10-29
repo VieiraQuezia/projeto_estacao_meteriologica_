@@ -1,17 +1,9 @@
-:root {
-  --primary-color: #4285f4;
-  --text-color: #3c4043;
-  --link-hover-color: #1a73e8;
-  --border-color: #dadce0;
-  --background-white: #ffffff;
-  }
-  
   .header {
-   background: var(--background-white) !important;
-   color: var(--text-color) !important;
+   background: #ffffff !important;
+   color: #3c4043 !important;
    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
    padding: 1rem 0;
-   border-bottom: 1px solid var(--border-color);
+   border-bottom: 1px solid #dadce0;
   }
   
   .header-inner {
@@ -30,13 +22,13 @@
    font-size: 1.25rem;
    font-weight: 500;
    line-height: 1;
-   color: var(--text-color);
+   color: #3c4043;
   }
   
   .header-logo .lucide-cloudicon {
    width: 28px;
    height: 28px;
-   color: var(--primary-color);
+   color: #4285f4;
    margin-right: 8px;
   }
   
@@ -58,7 +50,7 @@
   .nav-desktop a,
   .nav-mobile a {
    text-decoration: none;
-   color: var(--text-color);
+   color: #3c4043;
    font-weight: 500;
    transition: color 0.2s, background-color 0.2s;
    border-radius: 4px;
@@ -67,18 +59,18 @@
   .nav-desktop a { font-size: 0.875rem; padding: 8px 12px; }
   
   
-  .nav-desktop a:hover { color: var(--link-hover-color); background: #f1f3f4; }
+  .nav-desktop a:hover { color:#1a73e8; background: #f1f3f4; }
   
   .active-link { 
-    color: var(--primary-color) !important;
+    color: #4285f4 !important;
     font-weight: 600 !important; 
   }
   
   .nav-mobile {
    display: flex;
    flex-direction: column;
-   background: var(--background-white);
-   border-top: 1px solid var(--border-color);
+   background: #ffffff;
+   border-top: 1px solid #dadce0;
    padding: 8px 0;
   }
   
@@ -86,7 +78,7 @@
   .nav-mobile a:hover { background: #f1f3f4; }
   .nav-mobile a.active-link:hover {
     background: #f1f3f4; 
-    color: var(--link-hover-color) !important;
+    color: #1a73e8 !important;
   }
   
   .menu-button {
@@ -94,7 +86,7 @@
    background: none;
    border: none;
    cursor: pointer;
-   color: var(--text-color);
+   color: #3c4043;
    padding: 8px;
    border-radius: 4px;
    transition: background 0.2s;

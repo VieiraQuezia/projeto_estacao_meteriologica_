@@ -1,21 +1,7 @@
-:root {
-    --bg-light: #f9fafb;
-    --bg-white: #ffffff;
-    --primary-blue: #2563eb;
-    --primary-green: #34d399;
-    --title-color: #1f2937;
-    --text-color: #4b5563;
-    --text-subtitle: #6b7280;
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    --spacing-base: 16px;
-}
-
 .equipe-pagina-principal {
     width: 100%;
     min-height: 100vh;
-    background-color: var(--bg-light);
+    background-color: #f9fafb;
     padding: 64px 0;
 }
 
@@ -28,23 +14,23 @@
 .secao-titulo-principal {
     font-size: 2.25rem;
     font-weight: 700;
-    color: var(--title-color);
+    color: #1f2937;
     margin-bottom: 16px;
     text-align: center;
 }
 
 .secao-subtitulo {
     font-size: 1.25rem;
-    color: var(--text-subtitle);
+    color: #6b7280;
     margin: 0 auto 48px;
     max-width: 768px;
     text-align: center;
 }
 
 .bloco-introducao-equipe {
-    background-color: var(--bg-white);
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
     padding: 32px;
     margin-bottom: 48px;
 }
@@ -64,20 +50,20 @@
 .icone-resumo-equipe {
     width: 48px;
     height: 48px;
-    color: var(--primary-blue);
+    color: #2563eb;
     margin: 0 auto 16px;
 }
 
 .titulo-resumo-equipe {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--title-color);
+    color: #1f2937;
     margin-bottom: 16px;
 }
 
 .texto-resumo-equipe {
     font-size: 1.125rem;
-    color: var(--text-color);
+    color:#4b5563;
     line-height: 1.75;
     margin: 0 auto;
     max-width: 768px;
@@ -90,15 +76,15 @@
 }
 
 .cartao-membro {
-    background-color: var(--bg-white);
+    background-color:#ffffff;
     border-radius: 8px;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: box-shadow 0.3s ease;
 }
 
 .cartao-membro:hover {
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
 .foto-membro {
@@ -115,12 +101,12 @@
 .nome-membro {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--title-color);
+    color: #1f2937;
     margin-bottom: 8px;
 }
 
 .funcao-membro {
-    color: var(--primary-blue);
+    color: #2563eb;
     font-weight: 600;
     margin-bottom: 12px;
 }
@@ -132,12 +118,12 @@
 }
 
 .link-social {
-    color: var(--text-subtitle);
+    color: #6b7280;
     transition: color 0.2s;
 }
 
 .link-social:hover {
-    color: var(--primary-blue);
+    color: #2563eb;
 }
 
 .link-social svg {
@@ -148,9 +134,9 @@
 
 .bloco-agradecimentos {
     margin-top: 48px;
-    background: linear-gradient(to right, var(--primary-blue), var(--primary-green));
+    background: linear-gradient(to right, #2563eb, #34d399);
     border-radius: 8px;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
     padding: 32px;
     color: white;
     text-align: center;
