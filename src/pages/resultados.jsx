@@ -1,6 +1,7 @@
 import React from 'react';
 import { CheckCircle, TrendingUp, Award } from 'lucide-react';
 import './css/Resultados.css';
+import Interface from '/interfacemqtt.png'
 
 export default function Resultados() {
   const aprendizados = [
@@ -60,6 +61,7 @@ export default function Resultados() {
                 src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop" 
                 alt="Projeto Físico" 
                 className="imagem-projeto" 
+                height='70%'
               />
               <p className="legenda-projeto">
                 Circuito completo montado em protoboard com todos os componentes
@@ -73,9 +75,11 @@ export default function Resultados() {
                 Interface MQTT
               </h3>
               <img 
-                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop" 
+                src={Interface}
                 alt="Interface MQTT" 
                 className="imagem-projeto" 
+                width='auto'
+                height='70%'
               />
               <p className="legenda-projeto">
                 Dados sendo recebidos em tempo real através do cliente MQTT no
