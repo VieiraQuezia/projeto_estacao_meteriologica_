@@ -8,7 +8,7 @@ export default function Home() {
       <section className="hero-banner">
         <div className="container">
           <CloudIcon className="hero-icone" />
-          <h1>Estação Meteorológica IoT</h1>
+          <h1>Estação Meteorológica</h1>
           <p>
             Monitoramento inteligente de temperatura, umidade e qualidade do ar usando ESP32 e MQTT
           </p>

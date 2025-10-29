@@ -32,6 +32,10 @@
 .footer-col {
   flex: 1 1 300px;
 }
+.footer-col img {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
 
 /* Logo e título */
 .footer-logo-area {

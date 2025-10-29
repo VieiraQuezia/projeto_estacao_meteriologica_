@@ -6,69 +6,151 @@ export default function Software() {
   const codeExample = `#include <WiFi.h>
 #include <PubSubClient.h>
 #include <DHT.h>
-// Configurações de Wi-Fi
-const char* ssid = "SEU_WIFI";
-const char* password = "SUA_SENHA";
-// Configurações do MQTT
-const char* mqtt_server = "broker.hivemq.com";
-const int mqtt_port = 1883;
-// Configuração dos sensores
-#define DHTPIN 4
-#define DHTTYPE DHT11
-DHT dht(DHTPIN, DHTTYPE);
-#define MQ135PIN 34
-#define LED_STATUS 2
-#define LED_ALERT 15
+
+// === PINOS ORIGINAIS ===
+#define PINAOUT 35
+#define LEDGAS 16
+#define LEDTEMPERATURA 17
+#define LEDUMIDADE 5
+#define DHT_PIN 22
+#define DHT_TYPE DHT22
+const int Limite = 3628;
+
+// === CONFIG WiFi ===
+#define WIFI_SSID "AP360_SENAI"
+#define WIFI_PASS "senai123"
+
+// === CONFIG MQTT ===
+#define MQTT_SERVER "10.136.38.159"
+#define MQTT_PORT 1883
+#define CLIENT_ID "Projeto_grupo06"
+#define TOPIC_TEMP "aulas/IOT/grupo06/temperatura"
+#define TOPIC_HUM "aulas/IOT/grupo06/umidade"
+#define TOPIC_GAS "aulas/IOT/grupo06/gas"
+
+// === OBJETOS E VARIÁVEIS ===
+DHT dht(DHT_PIN, DHT_TYPE);
 WiFiClient espClient;
-PubSubClient client(espClient);
-void setup() {
-  Serial.begin(115200);
-  // Inicializa LEDs
-  pinMode(LED_STATUS, OUTPUT);
-  pinMode(LED_ALERT, OUTPUT);
-  // Conecta ao Wi-Fi
-  WiFi.begin(ssid, password);
+PubSubClient mqttClient(espClient);
+
+float temperatura = 0.0;
+float umidade = 0.0;
+unsigned long lastMsg = 0;
+const long PUBLISH_INTERVAL = 5000; // 5 segundos
+
+// === FUNÇÃO: CONECTAR AO WIFI ===
+void setup_wifi() {
+  delay(10);
+  Serial.print("Conectando a rede: ");
+  Serial.println(WIFI_SSID);
+  WiFi.begin(WIFI_SSID, WIFI_PASS);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
-  Serial.println("WiFi conectado!");
-  // Configura MQTT
-  client.setServer(mqtt_server, mqtt_port);
-  // Inicializa sensor DHT11
-  dht.begin();
+  Serial.println("\nWiFi Conectado!");
+  Serial.print("Endereço IP: ");
+  Serial.println(WiFi.localIP());
 }
-void loop() {
-  if (!client.connected()) {
-    reconnect();
-  }
-  client.loop();
-  // Leitura dos sensores
-  float temp = dht.readTemperature();
-  float hum = dht.readHumidity();
-  int airQuality = analogRead(MQ135PIN);
-  // Verifica leituras válidas
-  if (!isnan(temp) && !isnan(hum)) {
-    // Publica dados via MQTT
-    String payload = String(temp) + "," + String(hum) + "," + String(airQuality);
-    client.publish("estacao/dados", payload.c_str());
-    // Controle de LEDs
-    digitalWrite(LED_STATUS, HIGH);
-    if (airQuality > 400) {
-      digitalWrite(LED_ALERT, HIGH);
+
+// === FUNÇÃO: CONECTAR AO MQTT ===
+void reconnect_mqtt() {
+  while (!mqttClient.connected()) {
+    Serial.print("Tentando conexão MQTT...");
+    if (mqttClient.connect(CLIENT_ID)) {
+      Serial.println(" Conectado!");
     } else {
-      digitalWrite(LED_ALERT, LOW);
-    }
-  }
-  delay(2000);
-}
-void reconnect() {
-  while (!client.connected()) {
-    if (client.connect("ESP32Client")) {
-      Serial.println("MQTT conectado!");
-    } else {
+      Serial.print(" Falha, rc=");
+      Serial.print(mqttClient.state());
+      Serial.println(" - Tentando novamente em 5 segundos...");
       delay(5000);
     }
+  }
+}
+
+// === PUBLICAR DADOS NO BROKER ===
+void publish_data(const char* topic, float value) {
+  char payload[10];
+  snprintf(payload, sizeof(payload), "%.2f", value);
+  mqttClient.publish(topic, payload);
+  Serial.print("Publicado em ");
+  Serial.print(topic);
+  Serial.print(": ");
+  Serial.println(payload);
+}
+
+// === CONFIGURAÇÃO INICIAL ===
+void setup() {
+  Serial.begin(115200);
+  pinMode(DHT_PIN, INPUT);
+  pinMode(LEDTEMPERATURA, OUTPUT);
+  pinMode(LEDUMIDADE, OUTPUT);
+  pinMode(LEDGAS, OUTPUT);
+  pinMode(PINAOUT, INPUT);
+
+  dht.begin();
+  setup_wifi();
+  mqttClient.setServer(MQTT_SERVER, MQTT_PORT);
+  Serial.println("Sistema iniciado com sucesso!");
+}
+
+// === LOOP PRINCIPAL ===
+void loop() {
+  // Manter conexões
+  if (!mqttClient.connected()) {
+    reconnect_mqtt();
+  }
+  mqttClient.loop();
+
+  unsigned long now = millis();
+  if (now - lastMsg > PUBLISH_INTERVAL) {
+    lastMsg = now;
+
+    // === LEITURA DO SENSOR DHT ===
+    temperatura = dht.readTemperature();
+    umidade = dht.readHumidity();
+
+    if (isnan(temperatura) || isnan(umidade)) {
+      Serial.println("Erro ao ler o sensor DHT!");
+      return;
+    }
+
+    // === LEITURA DO SENSOR DE GÁS ===
+    int valorgas = analogRead(PINAOUT);
+
+    Serial.println("=== Leitura dos Sensores ===");
+    Serial.println("Temperatura: " + String(temperatura, 1) + "°C");
+    Serial.println("Umidade: " + String(umidade, 1) + "%");
+    Serial.println("Valor do Gás: " + String(valorgas));
+    Serial.println("----------------------------");
+
+    // === LÓGICA LED TEMPERATURA ===
+    if (temperatura > 30 ) {
+      digitalWrite(LEDTEMPERATURA, HIGH);
+    } else {
+      digitalWrite(LEDTEMPERATURA, LOW);
+    }
+
+    // === LÓGICA LED UMIDADE ===
+    if (umidade > 40) {
+      digitalWrite(LEDUMIDADE, HIGH);
+    } else {
+      digitalWrite(LEDUMIDADE, LOW);
+    }
+
+    // === LÓGICA LED GÁS ===
+    if (valorgas > Limite) {
+      digitalWrite(LEDGAS, HIGH);
+      Serial.println("⚠️ Cuidado! Gás Tóxico Detectado!");
+    } else {
+      digitalWrite(LEDGAS, LOW);
+      Serial.println("✅ Ambiente Seguro.");
+    }
+
+    // === PUBLICAÇÕES MQTT ===
+    publish_data(TOPIC_TEMP, temperatura);
+    publish_data(TOPIC_HUM, umidade);
+    publish_data(TOPIC_GAS, valorgas);
   }
 }`;
   return (
