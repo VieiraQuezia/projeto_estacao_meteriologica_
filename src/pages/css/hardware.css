@@ -72,26 +72,9 @@
   font-size: 1rem;
 }
 
-/* --- Especificações --- */
-.specs {
-  margin-top: 3rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-}
 
-.specs h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #212529;
-  margin-bottom: 1.5rem;
-}
 
-.specs-grid {
-  display: grid;
-  gap: 1.5rem;
-}
+
 
 @media (min-width: 768px) {
   .specs-grid {
@@ -99,17 +82,4 @@
   }
 }
 
-.specs h3 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
 
-.specs ul {
-  padding-left: 1.5rem;
-  color: #495057;
-}
-
-.specs li {
-  margin-bottom: 0.5rem;
-}
