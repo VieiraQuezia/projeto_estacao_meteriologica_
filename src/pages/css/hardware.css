@@ -1,17 +1,8 @@
-:root {
-  --blue: #2563eb;
-  --green: #34d399;
-  --text-dark: #1f2937;
-  --text-gray: #4b5563;
-  --bg-light: #f8f9fa;
-  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 8px 14px rgba(0, 0, 0, 0.1);
-}
 
 .hardware-pagina {
   width: 60%; 
   min-height: 100vh;
-  background: var(--bg-light);
+  background: #f8f9fa;
   padding: 4rem 1rem;
   font-family: Arial, sans-serif;
   max-width: 1280px;
@@ -36,7 +27,7 @@
 
   background: #fff;
   border-radius: 8px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: 0.3s;
   display: flex;
@@ -45,7 +36,7 @@
 
 .cartao-componente:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1);
 }
 
 .cartao-imagem {
