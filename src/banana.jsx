@@ -12,7 +12,7 @@ import Resultados from './pages/resultados';
 import Perguntas from './pages/perguntas';
 import Software from './pages/software';
 import Equipe from './pages/equipe';
-import './App.css';
+import './banana.css';
 
 
 export function AppRouter() {
