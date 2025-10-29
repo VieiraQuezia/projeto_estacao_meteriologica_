@@ -1,13 +1,13 @@
 import React from 'react';
 import { Users, Mail, Linkedin, Github } from 'lucide-react';
-import './css/equipe.css'; // Importa o novo CSS
+import './css/equipe.css'; 
 
 export default function Equipe() {
  const team = [{
  name: 'Quezia A. Vieira',
  funcao: 'Líder 👑',
  contribuicao: 'Coordenação geral, integração de sistemas e documentação técnica',
-imagem: ''
+ imagem: ''
  }, {
  name: 'Leonardo M. Vicente',
  funcao: 'Vice-Líder 🧠',
@@ -26,24 +26,28 @@ imagem: ''
  }, 
 ];
  return (
-    <div className="team-page-wrapper">
-  <div className="content-max-width">
-  <h1 className="section-main-title">
+    <div className="equipe-pagina-principal">
+  <div className="conteudo-largura-maxima">
+  <h1 className="secao-titulo-principal">
    Nossa Equipe
   </h1>
-  <p className="section-subtitle">
+  <p className="secao-subtitulo">
    Conheça os membros responsáveis pelo desenvolvimento deste projeto de
    estação meteorológica IoT
   </p>
         
-  <div className="intro-team-block">
-   <img src="https://imagems.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=400&fit=crop" alt="Equipe" className="intro-imagem" />
-   <div className="team-summary-area">
-   <Users className="team-summary-icon" />
-   <h2 className="team-summary-title">
+  <div className="bloco-introducao-equipe">
+   <img 
+    src="https://imagems.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=400&fit=crop" 
+    alt="Equipe" 
+    className="imagem-introducao" 
+   />
+   <div className="area-resumo-equipe">
+   <Users className="icone-resumo-equipe" />
+   <h2 className="titulo-resumo-equipe">
     Trabalho em Equipe
    </h2>
-   <p className="team-summary-text">
+   <p className="texto-resumo-equipe">
     Este projeto foi desenvolvido de forma colaborativa, com cada
     membro contribuindo com suas habilidades específicas. A integração
     entre as diferentes áreas de conhecimento foi fundamental para o
@@ -53,28 +57,32 @@ imagem: ''
    </div>
   </div>
         
-  <div className="team-members-grid">
+  <div className="grid-membros-equipe">
    {team.map((member, index) => (
-            <div key={index} className="member-card">
-    <img src={member.imagem} alt={member.name} className="member-photo" />
-    <div className="member-info">
-    <h3 className="member-name">
+            <div key={index} className="cartao-membro">
+    <img 
+     src={member.imagem} 
+     alt={member.name} 
+     className="foto-membro" 
+    />
+    <div className="info-membro">
+    <h3 className="nome-membro">
      {member.name}
     </h3>
-    <p className="member-funcao">
+    <p className="funcao-membro">
      {member.funcao}
     </p>
-    <p className="member-contribuicao">
+    <p className="contribuicao-membro">
      {member.contribuicao}
     </p>
-    <div className="social-links">
-     <a href="#" className="social-link" aria-label={`Email de ${member.name}`}>
+    <div className="links-sociais">
+     <a href="#" className="link-social" aria-label={`Email de ${member.name}`}>
      <Mail />
      </a>
-     <a href="#" className="social-link" aria-label={`LinkedIn de ${member.name}`}>
+     <a href="#" className="link-social" aria-label={`LinkedIn de ${member.name}`}>
      <Linkedin />
      </a>
-     <a href="#" className="social-link" aria-label={`Github de ${member.name}`}>
+     <a href="#" className="link-social" aria-label={`Github de ${member.name}`}>
      <Github />
      </a>
     </div>
@@ -83,9 +91,9 @@ imagem: ''
           ))}
   </div>
         
-  <div className="thanks-block">
-   <h2 className="thanks-title">Agradecimentos</h2>
-   <p className="thanks-text">
+  <div className="bloco-agradecimentos">
+   <h2 className="titulo-agradecimentos">Agradecimentos</h2>
+   <p className="texto-agradecimentos">
    Agradecemos aos professores orientadores, à instituição de ensino e
    a todos que contribuíram direta ou indiretamente para a realização
    deste projeto. Essa experiência foi fundamental para nosso

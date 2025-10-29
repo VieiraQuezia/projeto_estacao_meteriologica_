@@ -12,20 +12,20 @@
     --spacing-base: 16px;
 }
 
-.team-page-wrapper {
+.equipe-pagina-principal {
     width: 100%;
     min-height: 100vh;
     background-color: var(--bg-light);
     padding: 64px 0;
 }
 
-.content-max-width {
+.conteudo-largura-maxima {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.section-main-title {
+.secao-titulo-principal {
     font-size: 2.25rem;
     font-weight: 700;
     color: var(--title-color);
@@ -33,7 +33,7 @@
     text-align: center;
 }
 
-.section-subtitle {
+.secao-subtitulo {
     font-size: 1.25rem;
     color: var(--text-subtitle);
     margin: 0 auto 48px;
@@ -41,7 +41,7 @@
     text-align: center;
 }
 
-.intro-team-block {
+.bloco-introducao-equipe {
     background-color: var(--bg-white);
     border-radius: 8px;
     box-shadow: var(--shadow-lg);
@@ -49,7 +49,7 @@
     margin-bottom: 48px;
 }
 
-.intro-image {
+.imagem-introducao {
     width: 100%;
     height: 256px;
     object-fit: cover;
@@ -57,25 +57,25 @@
     margin-bottom: 24px;
 }
 
-.team-summary-area {
+.area-resumo-equipe {
     text-align: center;
 }
 
-.team-summary-icon {
+.icone-resumo-equipe {
     width: 48px;
     height: 48px;
     color: var(--primary-blue);
     margin: 0 auto 16px;
 }
 
-.team-summary-title {
+.titulo-resumo-equipe {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--title-color);
     margin-bottom: 16px;
 }
 
-.team-summary-text {
+.texto-resumo-equipe {
     font-size: 1.125rem;
     color: var(--text-color);
     line-height: 1.75;
@@ -83,13 +83,13 @@
     max-width: 768px;
 }
 
-.team-members-grid {
+.grid-membros-equipe {
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
 }
 
-.member-card {
+.cartao-membro {
     background-color: var(--bg-white);
     border-radius: 8px;
     box-shadow: var(--shadow-lg);
@@ -97,61 +97,61 @@
     transition: box-shadow 0.3s ease;
 }
 
-.member-card:hover {
+.cartao-membro:hover {
     box-shadow: var(--shadow-xl);
 }
 
-.member-photo {
+.foto-membro {
     width: 100%;
     height: 256px;
     object-fit: cover;
     display: block;
 }
 
-.member-info {
+.info-membro {
     padding: 24px;
 }
 
-.member-name {
+.nome-membro {
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--title-color);
     margin-bottom: 8px;
 }
 
-.member-role {
+.funcao-membro {
     color: var(--primary-blue);
     font-weight: 600;
     margin-bottom: 12px;
 }
 
-.member-contribution {
+.contribuicao-membro {
     color: var(--text-color);
     line-height: 1.6;
     margin-bottom: 16px;
 }
 
-.social-links {
+.links-sociais {
     display: flex;
     gap: 12px;
 }
 
-.social-link {
+.link-social {
     color: var(--text-subtitle);
     transition: color 0.2s;
 }
 
-.social-link:hover {
+.link-social:hover {
     color: var(--primary-blue);
 }
 
-.social-link svg {
+.link-social svg {
     width: 20px;
     height: 20px;
     display: block;
 }
 
-.thanks-block {
+.bloco-agradecimentos {
     margin-top: 48px;
     background: linear-gradient(to right, var(--primary-blue), var(--primary-green));
     border-radius: 8px;
@@ -161,13 +161,13 @@
     text-align: center;
 }
 
-.thanks-title {
+.titulo-agradecimentos {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 16px;
 }
 
-.thanks-text {
+.texto-agradecimentos {
     font-size: 1.125rem;
     line-height: 1.75;
     margin: 0 auto;
@@ -175,13 +175,13 @@
 }
 
 @media (min-width: 768px) {
-    .team-members-grid {
+    .grid-membros-equipe {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
-    .team-members-grid {
+    .grid-membros-equipe {
         grid-template-columns: repeat(3, 1fr);
     }
 }
