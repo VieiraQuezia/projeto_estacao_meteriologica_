@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import './css/perguntas.css'; 
 
-export function Perguntas() {
+export default function Perguntas() {
+  // Removendo a anotação de tipo para evitar erro de sintaxe em JavaScript puro
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [{

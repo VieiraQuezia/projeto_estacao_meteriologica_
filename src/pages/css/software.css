@@ -1,0 +1,143 @@
+/* Definições Gerais */
+.pagina-software {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f9fafb; /* Fundo cinza claro */
+    padding: 4rem 0;
+}
+
+.conteudo-principal {
+    max-width: 80rem; /* Largura máxima */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.titulo-pagina {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Estilo do Card (Blocos brancos) */
+.cartao-secao {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Cabeçalho das Seções (com ícone) */
+.cabecalho-secao {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.icone-secao {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+.titulo-secao {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* Seção IDE e Configuração */
+.paragrafo-texto {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+}
+
+.titulo-subsecao {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.lista-config-caixa {
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.lista-config-caixa ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    color: #374151;
+}
+
+.lista-config-caixa ol li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.lista-config-caixa ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    padding-top: 0.25rem;
+}
+
+/* Seção Código-Fonte */
+.bloco-codigo {
+    background-color: #111827; /* Fundo preto */
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+.texto-codigo {
+    font-size: 0.875rem;
+    color: #f3f4f6;
+    white-space: pre;
+}
+
+/* Seção Funcionalidades */
+.grade-funcionalidades {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grade-funcionalidades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.item-funcionalidade {
+    border-left: 4px solid;
+    padding-left: 1rem;
+}
+
+.titulo-funcionalidade {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.descricao-funcionalidade {
+    color: #374151;
+}
+
+/* Cores específicas (Bordas e Ícones) */
+.borda-azul { border-color: #2563eb; }
+.borda-verde { border-color: #059669; }
+.borda-roxo { border-color: #9333ea; }
+.borda-laranja { border-color: #ea580c; }
+
+.icone-azul { color: #2563eb; }
+.icone-verde { color: #059669; }
+.icone-roxo { color: #9333ea; }
