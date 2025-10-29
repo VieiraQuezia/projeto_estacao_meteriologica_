@@ -97,7 +97,6 @@ export default function Perguntas() {
     <div className="perguntas-container">
       <div className="perguntas-conteudo-max">
         
-        {/* Título Principal */}
         <h1 className="perguntas-titulo-principal">
           Perguntas e Respostas
         </h1>
@@ -106,7 +105,6 @@ export default function Perguntas() {
           {faqs.map((categoria, categoriaIndex) => (
             <div key={categoriaIndex} className="perguntas-categorias-wrapper">
               
-              {/* Título da Categoria */}
               <h2 className="perguntas-categoria-titulo">
                 {categoria.categoria}
               </h2>
@@ -134,7 +132,6 @@ export default function Perguntas() {
                         }
                       </button>
                       
-                      {/* Resposta */}
                       {isOpen && (
                         <div className="faq-resposta">
                           {faq.a}

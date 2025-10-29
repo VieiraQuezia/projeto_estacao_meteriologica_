@@ -1,149 +1,131 @@
-/* Variáveis para cores */
 :root {
-    --cor-fundo-principal: #f9fafb; /* gray-50 */
-    --cor-fundo-cartao: #ffffff;
-    --cor-texto-titulo: #111827; /* gray-900 */
-    --cor-texto-principal: #374151; /* gray-700 */
-    --cor-fundo-imagem: #f3f4f6; /* gray-100 */
-    --cor-icone-principal: #2563eb; /* blue-600 */
-    --cor-botao: #2563eb; /* blue-600 */
-    --cor-botao-hover: #1d4ed8; /* blue-700 */
-  }
-  
-  /* Estilo do container principal */
-  .simulacao-container {
-    width: 100%;
-    min-height: 100vh;
-    background-color: var(--cor-fundo-principal);
-    padding-top: 4rem; /* py-16 */
-    padding-bottom: 4rem; /* py-16 */
-  }
-  
-  /* Container de conteúdo */
-  .simulacao-conteudo-max {
-    max-width: 80rem; /* max-w-7xl */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem; /* px-4 */
-    padding-right: 1rem; /* px-4 */
-  }
-  
-  /* Título principal */
-  .simulacao-titulo-principal {
-    font-size: 2.25rem; /* text-4xl */
-    font-weight: 700; /* font-bold */
-    color: var(--cor-texto-titulo);
-    margin-bottom: 3rem; /* mb-12 */
-    text-align: center;
-  }
-  
-  /* Cartão principal */
-  .simulacao-cartao {
-    background-color: var(--cor-fundo-cartao);
-    border-radius: 0.5rem; /* rounded-lg */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-lg */
-    padding: 2rem; /* p-8 */
-    margin-bottom: 2rem; /* mb-8 */
-  }
-  
-  /* Cabeçalho (ícone + título) */
-  .simulacao-cabecalho {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem; /* mb-6 */
-  }
-  
-  /* Ícone */
-  .simulacao-icone {
-    width: 2rem; /* w-8 */
-    height: 2rem; /* h-8 */
-    color: var(--cor-icone-principal);
-    margin-right: 1rem; /* mr-4 */
-  }
-  
-  /* Título secundário */
-  .simulacao-titulo-secundario {
-    font-size: 1.5rem; /* text-2xl */
-    font-weight: 700; /* font-bold */
-    color: var(--cor-texto-titulo);
-  }
-  
-  /* Container da Imagem */
-  .simulacao-imagem-container {
-    background-color: var(--cor-fundo-imagem);
-    border-radius: 0.5rem; /* rounded-lg */
-    padding: 2rem; /* p-8 */
-    margin-bottom: 1.5rem; /* mb-6 */
-  }
-  
-  /* Imagem */
-  .simulacao-imagem {
-    width: 100%;
-    border-radius: 0.5rem; /* rounded-lg */
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-md */
-    /* Remove a necessidade de height e object-fit, mas mantém a largura total */
-  }
-  
-  /* Seção de Texto e Listas */
-  .simulacao-conteudo-texto {
-    color: var(--cor-texto-principal);
-  }
-  
-  /* Parágrafos de texto */
-  .simulacao-paragrafo {
-    font-size: 1.125rem; /* text-lg */
-    line-height: 1.625; /* leading-relaxed */
-    margin-bottom: 1rem; /* Adicionado para separar parágrafos */
-  }
-  
-  /* Títulos de seção (Componentes, IDE) */
-  .simulacao-subtitulo {
-    font-size: 1.25rem; /* text-xl */
-    font-weight: 600; /* font-semibold */
-    color: var(--cor-texto-titulo);
-    margin-top: 1.5rem; /* mt-6 */
-    margin-bottom: 1rem; /* mb-4 */
-  }
-  
-  /* Lista de componentes */
-  .simulacao-lista {
-    list-style-type: disc;
-    list-style-position: inside;
-    margin-left: 1rem; /* ml-4 */
-    margin-bottom: 1.5rem; /* Espaçamento após a lista */
-  }
-  
-  .simulacao-lista li {
-    line-height: 1.5;
-    margin-bottom: 0.5rem; /* space-y-2 */
-  }
-  
-  /* Container do Botão */
-  .simulacao-botao-container {
-    margin-top: 2rem; /* mt-8 */
-    text-align: center;
-  }
-  
-  /* Botão de Acesso */
-  .simulacao-botao {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.75rem 1.5rem; /* px-6 py-3 */
-    background-color: var(--cor-botao);
-    color: var(--cor-fundo-cartao);
-    font-weight: 600; /* font-semibold */
-    border-radius: 0.5rem; /* rounded-lg */
-    text-decoration: none;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .simulacao-botao:hover {
-    background-color: var(--cor-botao-hover);
-  }
-  
-  /* Ícone do Botão */
-  .simulacao-botao-icone {
-    width: 1.25rem; /* w-5 */
-    height: 1.25rem; /* h-5 */
-    margin-left: 0.5rem; /* ml-2 */
-  }
+  --cor-fundo-principal: #f9fafb;
+  --cor-fundo-cartao: #ffffff;
+  --cor-texto-titulo: #111827;
+  --cor-texto-principal: #374151;
+  --cor-fundo-imagem: #f3f4f6;
+  --cor-icone-principal: #2563eb;
+  --cor-botao: #2563eb;
+  --cor-botao-hover: #1d4ed8;
+}
+
+.simulacao-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--cor-fundo-principal);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.simulacao-conteudo-max {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.simulacao-titulo-principal {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--cor-texto-titulo);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.simulacao-cartao {
+  background-color: var(--cor-fundo-cartao);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.simulacao-cabecalho {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.simulacao-icone {
+  width: 2rem;
+  height: 2rem;
+  color: var(--cor-icone-principal);
+  margin-right: 1rem;
+}
+
+.simulacao-titulo-secundario {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-texto-titulo);
+}
+
+.simulacao-imagem-container {
+  background-color: var(--cor-fundo-imagem);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.simulacao-imagem {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.simulacao-conteudo-texto {
+  color: var(--cor-texto-principal);
+}
+
+.simulacao-paragrafo {
+  font-size: 1.125rem;
+  line-height: 1.625;
+  margin-bottom: 1rem;
+}
+
+.simulacao-subtitulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cor-texto-titulo);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.simulacao-lista {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.simulacao-lista li {
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.simulacao-botao-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.simulacao-botao {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--cor-botao);
+  color: var(--cor-fundo-cartao);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.simulacao-botao:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+.simulacao-botao-icone {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+}
