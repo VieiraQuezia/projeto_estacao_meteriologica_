@@ -2,7 +2,7 @@ import React from 'react';
 import { Users, Mail, Linkedin, Github } from 'lucide-react';
 import './css/equipe.css'; // Importa o novo CSS
 
-export function Equipe() {
+export default function Equipe() {
  const team = [{
  name: 'Quezia A. Vieira',
  funcao: 'Líder',

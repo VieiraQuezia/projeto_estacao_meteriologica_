@@ -27,7 +27,7 @@ export function AppRouter() {
             <Route path="/hardware" element={<Hardware />} />
             {/* <Route path="/software" element={<Software />} /> */}
             <Route path="/perguntas" element={<Perguntas />} />
-            <Route path="/resultados" element={<Resultados />} />
+            {/* <Route path="/resultados" element={<Resultados />} /> */}
             <Route path="/equipe" element={<Equipe />} /> 
           </Routes>
         </main>
