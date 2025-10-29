@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle, TrendingUp, Award } from 'lucide-react';
-import './css/Resultados.css';
+import './css/resultados.css';
 import Interface from '/interfacemqtt.png'
 
 export default function Resultados() {
