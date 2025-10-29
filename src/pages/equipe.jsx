@@ -34,7 +34,7 @@ export default function Equipe() {
         
   <div className="bloco-introducao-equipe">
    <img 
-    src="https://imagems.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=400&fit=crop" 
+    src="/grupo.jpg     " 
     alt="Equipe" 
     className="imagem-introducao" 
    />

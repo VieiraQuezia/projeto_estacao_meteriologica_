@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="footer-col">
             <div className="footer-logo-area">
               <CloudIcon />
-              <span>Estação Meteorológica IoT</span>
+              <p>Estação Meteorológica</p>
             </div>
             <p className="footer-description">
               Projeto acadêmico de uma estação meteorológica utilizando ESP32, sensores DHT11 e MQ-135, e protocolo MQTT.
@@ -38,6 +38,9 @@ export default function Footer() {
               <a href="#" aria-label="LinkedIn"><Linkedin /></a>
               <a href="mailto:contato@exemplo.com" aria-label="Email"><Mail /></a>
             </div>
+            <br />
+                          <img src="/logo.png" alt="logo" />
+
           </div>
           
         </div>
