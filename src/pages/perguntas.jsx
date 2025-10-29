@@ -3,7 +3,6 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import './css/perguntas.css'; 
 
 export function Perguntas() {
-  // Removendo a anotação de tipo para evitar erro de sintaxe em JavaScript puro
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [{
@@ -97,7 +96,6 @@ export function Perguntas() {
     <div className="perguntas-container">
       <div className="perguntas-conteudo-max">
         
-        {/* Título Principal */}
         <h1 className="perguntas-titulo-principal">
           Perguntas e Respostas
         </h1>
@@ -106,7 +104,6 @@ export function Perguntas() {
           {faqs.map((categoria, categoriaIndex) => (
             <div key={categoriaIndex} className="perguntas-categorias-wrapper">
               
-              {/* Título da Categoria */}
               <h2 className="perguntas-categoria-titulo">
                 {categoria.categoria}
               </h2>
@@ -134,7 +131,6 @@ export function Perguntas() {
                         }
                       </button>
                       
-                      {/* Resposta */}
                       {isOpen && (
                         <div className="faq-resposta">
                           {faq.a}

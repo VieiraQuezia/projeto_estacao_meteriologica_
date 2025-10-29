@@ -1,0 +1,189 @@
+:root {
+    --cor-fundo-principal: #f9fafb;
+    --cor-fundo-cartao: #ffffff;
+    --cor-texto-titulo: #111827;
+    --cor-texto-principal: #4b5563;
+    --cor-verde-icone: #059669;
+    --cor-azul-icone: #2563eb;
+    --cor-fundo-video: #f3f4f6;
+    --cor-conclusao-inicio: #2563eb;
+    --cor-conclusao-fim: #10b981;
+  }
+  
+  .resultados-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-fundo-principal);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .resultados-conteudo-max {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .resultados-titulo-principal {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--cor-texto-titulo);
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .resultados-cartao {
+    background-color: var(--cor-fundo-cartao);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .resultados-cabecalho {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .resultados-icone {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+  }
+  
+  .resultados-icone-aprendizados {
+    color: var(--cor-verde-icone);
+  }
+  
+  .resultados-icone-projeto {
+    color: var(--cor-azul-icone);
+  }
+  
+  .resultados-titulo-secao {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-texto-titulo);
+  }
+  
+  .aprendizados-lista-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .aprendizados-lista-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .aprendizados-item {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 0.75rem;
+  }
+  
+  .aprendizados-icone-check {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--cor-verde-icone);
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+  }
+  
+  .aprendizados-texto {
+    color: var(--cor-texto-principal);
+  }
+  
+  .projeto-funcionamento-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .projeto-funcionamento-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .subtitulo-secao {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cor-texto-titulo);
+    margin-bottom: 1rem;
+  }
+  
+  .imagem-projeto {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+  
+  .legenda-projeto {
+    color: var(--cor-texto-principal);
+    margin-top: 1rem;
+  }
+  
+  .demonstracao-secao {
+    background-color: var(--cor-fundo-video);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+  }
+  
+  .video-placeholder-container {
+    aspect-ratio: 16 / 9;
+    background-color: #e5e7eb;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .video-placeholder-conteudo {
+    text-align: center;
+    color: #4b5563;
+  }
+  
+  .video-placeholder-titulo {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .video-placeholder-legenda {
+    font-size: 0.875rem;
+  }
+  
+  .video-descricao {
+    line-height: 1.625;
+  }
+  
+  .conclusao-cartao {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    color: #ffffff;
+    background-image: linear-gradient(to right, var(--cor-conclusao-inicio), var(--cor-conclusao-fim));
+  }
+  
+  .conclusao-titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .conclusao-texto {
+    font-size: 1.125rem;
+    line-height: 1.625;
+    text-align: center;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
