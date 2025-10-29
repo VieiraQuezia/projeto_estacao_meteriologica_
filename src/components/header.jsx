@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+// Importar useLocation do react-router-dom
 import { Menu, X, CloudIcon } from "lucide-react";
+import { useLocation } from "react-router-dom"; // Importe esta linha
 import "./header.css";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  // Obter o caminho atual da URL
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   const navItems = [
     { path: "/", label: "Home" },
@@ -25,11 +30,21 @@ export default function Header() {
         </div>
 
         <nav className="nav-desktop" aria-label="Navegação principal">
-          {navItems.map((item) => (
-            <a key={item.path} href={item.path}>
-              <span>{item.label}</span>
-            </a>
-          ))}
+          {navItems.map((item) => {
+            // Verifica se o caminho do item é o caminho atual
+            const isActive = item.path === currentPath;
+
+            return (
+              // Aplica a classe 'active-link' se for o item ativo
+              <a
+                key={item.path}
+                href={item.path}
+                className={isActive ? "active-link" : ""}
+              >
+                <span>{item.label}</span>
+              </a>
+            );
+          })}
         </nav>
 
         <button
@@ -43,11 +58,19 @@ export default function Header() {
 
       {open && (
         <div className="nav-mobile" role="menu">
-          {navItems.map((item) => (
-            <a key={item.path} href={item.path} onClick={() => setOpen(false)}>
-              <span>{item.label}</span>
-            </a>
-          ))}
+          {navItems.map((item) => {
+            const isActive = item.path === currentPath;
+            return (
+              <a
+                key={item.path}
+                href={item.path}
+                onClick={() => setOpen(false)}
+                className={isActive ? "active-link" : ""}
+              >
+                <span>{item.label}</span>
+              </a>
+            );
+          })}
         </div>
       )}
     </header>

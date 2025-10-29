@@ -49,16 +49,16 @@ export default function Hardware() {
   ];
 
   return (
-    <section className="hardware">
-      <h1 className="title">Hardware</h1>
+    <section className="hardware-pagina">
+      <h1 className="titulo-principal">Hardware</h1>
 
-      <div className="grid">
+      <div className="grid-componentes">
         {components.map(({ name, desc, img, icon: Icon, color }, i) => (
-          <article key={i} className="card">
-            <img src={img} alt={name} className="card-img" />
-            <div className="card-body">
-              <header className="card-head">
-                <Icon className={`icon ${color}`} />
+          <article key={i} className="cartao-componente">
+            <img src={img} alt={name} className="cartao-imagem" />
+            <div className="cartao-corpo">
+              <header className="cartao-cabecalho">
+                <Icon className={`icone-componente ${color}`} />
                 <h3>{name}</h3>
               </header>
               <p>{desc}</p>
