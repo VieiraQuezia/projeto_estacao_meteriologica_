@@ -67,29 +67,7 @@ export default function Hardware() {
         ))}
       </div>
 
-      <div className="specs">
-        <h2>Especificações Técnicas</h2>
-        <div className="specs-grid">
-          <div>
-            <h3>Alimentação</h3>
-            <ul>
-              <li>ESP32: 3.3V (via USB ou regulador)</li>
-              <li>DHT11: 3V</li>
-              <li>MQ-135: 5V</li>
-              <li>LEDs: 3.3V com resistores limitadores</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Comunicação</h3>
-            <ul>
-              <li>Wi-Fi 802.11 b/g/n</li>
-              <li>Protocolo MQTT</li>
-              <li>Porta serial para debug</li>
-              <li>GPIO para controle de LEDs</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      
     </section>
   );
 }

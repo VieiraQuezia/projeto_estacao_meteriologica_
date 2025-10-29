@@ -1,0 +1,202 @@
+/* Variáveis de Cores */
+:root {
+    --bg-light: #f9fafb; /* Cor de fundo principal (bg-gray-50) */
+    --bg-white: #ffffff;
+    --primary-blue: #2563eb; /* blue-600 */
+    --primary-green: #34d399; /* green-500 */
+    --title-color: #1f2937; /* text-gray-900 */
+    --text-color: #4b5563; /* text-gray-700 */
+    --text-subtitle: #6b7280; /* text-gray-600 */
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --spacing-base: 16px;
+}
+
+/* --- Container Principal --- */
+
+.team-page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-light);
+    padding: 64px 0; /* py-16 */
+}
+
+.content-max-width {
+    max-width: 1280px; /* max-w-7xl */
+    margin: 0 auto;
+    padding: 0 20px; /* px-4 */
+}
+
+/* --- Títulos da Seção --- */
+
+.section-main-title {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 16px; /* mb-4 */
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.25rem; /* text-xl */
+    color: var(--text-subtitle);
+    margin: 0 auto 48px; /* mb-12 max-w-3xl mx-auto */
+    max-width: 768px;
+    text-align: center;
+}
+
+/* --- Bloco de Introdução (Imagem e Texto) --- */
+
+.intro-team-block {
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    padding: 32px; /* p-8 */
+    margin-bottom: 48px; /* mb-12 */
+}
+
+.intro-image {
+    width: 100%;
+    height: 256px; /* h-64 */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 24px; /* mb-6 */
+}
+
+.team-summary-area {
+    text-align: center;
+}
+
+.team-summary-icon {
+    width: 48px; /* w-12 */
+    height: 48px; /* h-12 */
+    color: var(--primary-blue);
+    margin: 0 auto 16px; /* mx-auto mb-4 */
+}
+
+.team-summary-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 16px; /* mb-4 */
+}
+
+.team-summary-text {
+    font-size: 1.125rem; /* text-lg */
+    color: var(--text-color);
+    line-height: 1.75; /* leading-relaxed */
+    margin: 0 auto;
+    max-width: 768px;
+}
+
+/* --- Grid de Membros da Equipe --- */
+
+.team-members-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Padrão mobile */
+    gap: 32px; /* gap-8 */
+}
+
+/* Card Individual do Membro */
+.member-card {
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    box-shadow: var(--shadow-xl); /* hover:shadow-xl */
+}
+
+.member-photo {
+    width: 100%;
+    height: 256px; /* h-64 */
+    object-fit: cover;
+    display: block;
+}
+
+.member-info {
+    padding: 24px; /* p-6 */
+}
+
+.member-name {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 8px; /* mb-2 */
+}
+
+.member-role {
+    color: var(--primary-blue);
+    font-weight: 600;
+    margin-bottom: 12px; /* mb-3 */
+}
+
+.member-contribution {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 16px; /* mb-4 */
+}
+
+/* Links Sociais */
+.social-links {
+    display: flex;
+    gap: 12px; /* space-x-3 */
+}
+
+.social-link {
+    color: var(--text-subtitle);
+    transition: color 0.2s;
+}
+
+.social-link:hover {
+    color: var(--primary-blue); /* hover:text-blue-600 */
+}
+
+.social-link svg {
+    width: 20px; /* w-5 */
+    height: 20px; /* h-5 */
+    display: block;
+}
+
+/* --- Seção de Agradecimentos --- */
+
+.thanks-block {
+    margin-top: 48px; /* mt-12 */
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-green));
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    padding: 32px; /* p-8 */
+    color: white;
+    text-align: center;
+}
+
+.thanks-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700;
+    margin-bottom: 16px; /* mb-4 */
+}
+
+.thanks-text {
+    font-size: 1.125rem; /* text-lg */
+    line-height: 1.75;
+    margin: 0 auto;
+    max-width: 768px;
+}
+
+/* --- Media Queries --- */
+
+@media (min-width: 768px) {
+    .team-members-grid {
+        grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-members-grid {
+        grid-template-columns: repeat(3, 1fr); /* lg:grid-cols-3 */
+    }
+}
