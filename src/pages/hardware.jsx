@@ -53,12 +53,12 @@ export default function Hardware() {
       <h1 className="title">Hardware</h1>
 
       <div className="grid">
-        {components.map(({ name, desc, img, icon: color }, i) => (
+        {components.map(({ name, desc, img, icon: Icon, color }, i) => (
           <article key={i} className="card">
             <img src={img} alt={name} className="card-img" />
             <div className="card-body">
               <header className="card-head">
-                {/* <Icon className={`icon ${color}`} /> */}
+                <Icon className={`icon ${color}`} />
                 <h3>{name}</h3>
               </header>
               <p>{desc}</p>
@@ -66,8 +66,6 @@ export default function Hardware() {
           </article>
         ))}
       </div>
-
-      
     </section>
   );
 }
