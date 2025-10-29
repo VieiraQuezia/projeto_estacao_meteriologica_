@@ -1,14 +1,24 @@
-.hardware {
+:root {
+  --blue: #2563eb;
+  --green: #34d399;
+  --text-dark: #1f2937;
+  --text-gray: #4b5563;
+  --bg-light: #f8f9fa;
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 8px 14px rgba(0, 0, 0, 0.1);
+}
+
+.hardware-pagina {
   width: 100%;
   min-height: 100vh;
-  background: #f8f9fa;
+  background: var(--bg-light);
   padding: 4rem 1rem;
   font-family: Arial, sans-serif;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.title {
+.titulo-principal {
   font-size: 2.25rem;
   font-weight: 700;
   color: #212529;
@@ -16,70 +26,64 @@
   margin-bottom: 3rem;
 }
 
-.grid {
+.grid-componentes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
-.card {
+.cartao-componente {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
   overflow: hidden;
   transition: 0.3s;
   display: flex;
   flex-direction: column;
 }
 
-.card:hover {
+.cartao-componente:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
 }
 
-.card-img {
+.cartao-imagem {
   width: 100%;
   height: 12rem;
   object-fit: cover;
 }
 
-.card-body {
+.cartao-corpo {
   padding: 1.5rem;
   flex-grow: 1;
 }
 
-.card-head {
+.cartao-cabecalho {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.icon {
+.icone-componente {
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 0.75rem;
 }
 
-.card-body h3 {
+.cartao-corpo h3 {
   font-size: 1.25rem;
   font-weight: 700;
   color: #212529;
 }
 
-.card-body p {
+.cartao-corpo p {
   color: #495057;
   line-height: 1.6;
   font-size: 1rem;
 }
-
-
-
-
 
 @media (min-width: 768px) {
   .specs-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-
