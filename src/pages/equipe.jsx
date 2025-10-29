@@ -6,23 +6,19 @@ export default function Equipe() {
  const team = [{
  name: 'Quezia A. Vieira',
  funcao: 'Líder 👑',
- contribuicao: 'Coordenação geral, integração de sistemas e documentação técnica',
- imagem: ''
+ imagem: '/Quezia.jpg'
  }, {
  name: 'Leonardo M. Vicente',
  funcao: 'Vice-Líder 🧠',
- contribuicao: 'Montagem do circuito, testes de sensores e calibração',
- imagem: ''
+ imagem: '/leo.jpg'
  }, {
  name: 'Guilherme G. Santana',
  funcao: 'Desenvolvedor 💻',
- contribuicao: 'Programação do ESP32, implementação MQTT e debugging',
- imagem: ''
+ imagem: '/Guilherme.jpg'
  }, {
  name: 'Hayeska L. A. Machado',
  funcao: 'Desenvolvedora 💻',
- contribuicao: 'Configuração do broker MQTT e arquitetura de rede',
- imagem: ''
+ imagem: '/Hayeska.jpg'
  }, 
 ];
  return (
@@ -72,9 +68,7 @@ export default function Equipe() {
     <p className="funcao-membro">
      {member.funcao}
     </p>
-    <p className="contribuicao-membro">
-     {member.contribuicao}
-    </p>
+    
     <div className="links-sociais">
      <a href="#" className="link-social" aria-label={`Email de ${member.name}`}>
      <Mail />
