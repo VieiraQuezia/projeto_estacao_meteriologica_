@@ -6,7 +6,6 @@
   --background-white: #ffffff;
   }
   
-  /* Header */
   .header {
    background: var(--background-white) !important;
    color: var(--text-color) !important;
@@ -15,7 +14,6 @@
    border-bottom: 1px solid var(--border-color);
   }
   
-  /* Container interno */
   .header-inner {
    max-width: 1200px;
    margin: 0 auto;
@@ -26,7 +24,6 @@
    height: 48px;
   }
   
-  /* Logo */
   .header-logo {
    display: flex;
    align-items: center;
@@ -49,7 +46,6 @@
    margin: 0;
   }
   
-  /* Navegação */
   .nav-desktop,
   .nav-mobile {
    gap: 20px;
@@ -70,14 +66,12 @@
   
   .nav-desktop a { font-size: 0.875rem; padding: 8px 12px; }
   
-  /* REMOVIDO: .nav-desktop a:first-child { color: var(--primary-color); } */
   
   .nav-desktop a:hover { color: var(--link-hover-color); background: #f1f3f4; }
   
-  /* NOVA REGRA: Link ativo */
   .active-link { 
     color: var(--primary-color) !important;
-    font-weight: 600 !important; /* Destaque levemente maior */
+    font-weight: 600 !important; 
   }
   
   .nav-mobile {
@@ -90,12 +84,11 @@
   
   .nav-mobile a { font-size: 1rem; padding: 12px 20px; }
   .nav-mobile a:hover { background: #f1f3f4; }
-  .nav-mobile a.active-link:hover { /* Evita que o hover desfaça o destaque */
+  .nav-mobile a.active-link:hover {
     background: #f1f3f4; 
     color: var(--link-hover-color) !important;
   }
   
-  /* Botão de menu */
   .menu-button {
    display: block;
    background: none;
@@ -109,14 +102,12 @@
   
   .menu-button:hover { background: #f1f3f4; }
   
-  /* Gradiente inferior do header */
   .header-bottom-gradient {
    height: 4px;
    width: 100%;
    background: linear-gradient(to right, #4285f4, #66bb6a);
   }
   
-  /* Media Query Desktop */
   @media (min-width: 768px) {
    .nav-desktop { display: flex; }
    .menu-button { display: none; }
