@@ -1,152 +1,143 @@
 :root {
-    --cor-fundo-principal: #f9fafb;
-    --cor-fundo-cartao: #ffffff;
-    --cor-texto-titulo: #111827;
-    --cor-texto-principal: #374151;
-    --cor-alerta-problema: #dc2626;
-    --cor-alerta-solucao: #16a34a;
-    --cor-fundo-fluxograma-inicio: #eff6ff;
-    --cor-fundo-fluxograma-fim: #f0fff4; 
-    --cor-seta: #2563eb; 
-  }
-  
-  .projeto-container {
-    width: 100%;
-    min-height: 100vh;
-    background-color: var(--cor-fundo-principal);
-    padding-top: 4rem; 
-    padding-bottom: 4rem; 
-  }
-  
-  .projeto-conteudo-max {
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem; 
-    padding-right: 1rem; 
-  }
-  
-  .projeto-titulo {
-    font-size: 2.25rem;
-    font-weight: 700; 
-    color: var(--cor-texto-titulo);
-    margin-bottom: 3rem;
-    text-align: center;
-  }
-  
-  .projeto-cartao {
-    background-color: var(--cor-fundo-cartao);
-    border-radius: 0.5rem; 
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); 
-    padding: 2rem; 
-    margin-bottom: 3rem;
-  }
-  
-  .projeto-cartao-cabecalho {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem; 
-  }
-  
-  .projeto-cartao-titulo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--cor-texto-titulo);
-  }
-  
-  .projeto-icone-alerta,
-  .projeto-icone-solucao {
-    width: 2rem; 
-    height: 2rem;
-    margin-right: 1rem;
-  }
-  .projeto-icone-alerta {
-    color: var(--cor-alerta-problema);
-  }
-  .projeto-icone-solucao {
-    color: var(--cor-alerta-solucao);
-  }
-  
-  /* Parágrafos de texto */
-  .projeto-paragrafo {
-    font-size: 1.125rem;
-    color: var(--cor-texto-principal);
-    line-height: 1.625; 
-    margin-bottom: 1.5rem; 
-  }
-  
-  .fluxograma-secao {
-    background: linear-gradient(to right, var(--cor-fundo-fluxograma-inicio), var(--cor-fundo-fluxograma-fim));
-    border-radius: 0.5rem; 
-    padding: 2rem; 
-  }
-  
-  .fluxograma-titulo {
-    font-size: 1.25rem;
-    font-weight: 600; 
-    color: var(--cor-texto-titulo);
-    margin-bottom: 1.5rem; /* mb-6 */
-    text-align: center;
-  }
-  
-  /* Container dos elementos do fluxograma */
+  --cor-fundo-principal: #f9fafb;
+  --cor-fundo-cartao: #ffffff;
+  --cor-texto-titulo: #111827;
+  --cor-texto-principal: #374151;
+  --cor-alerta-problema: #dc2626;
+  --cor-alerta-solucao: #16a34a;
+  --cor-fundo-fluxograma-inicio: #eff6ff;
+  --cor-fundo-fluxograma-fim: #f0fff4; 
+  --cor-seta: #2563eb; 
+}
+
+.projeto-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--cor-fundo-principal);
+  padding-top: 4rem; 
+  padding-bottom: 4rem; 
+}
+
+.projeto-conteudo-max {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+}
+
+.projeto-titulo {
+  font-size: 2.25rem;
+  font-weight: 700; 
+  color: var(--cor-texto-titulo);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.projeto-cartao {
+  background-color: var(--cor-fundo-cartao);
+  border-radius: 0.5rem; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); 
+  padding: 2rem; 
+  margin-bottom: 3rem;
+}
+
+.projeto-cartao-cabecalho {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem; 
+}
+
+.projeto-cartao-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-texto-titulo);
+}
+
+.projeto-icone-alerta,
+.projeto-icone-solucao {
+  width: 2rem; 
+  height: 2rem;
+  margin-right: 1rem;
+}
+.projeto-icone-alerta {
+  color: var(--cor-alerta-problema);
+}
+.projeto-icone-solucao {
+  color: var(--cor-alerta-solucao);
+}
+
+.projeto-paragrafo {
+  font-size: 1.125rem;
+  color: var(--cor-texto-principal);
+  line-height: 1.625; 
+  margin-bottom: 1.5rem; 
+}
+
+.fluxograma-secao {
+  background: linear-gradient(to right, var(--cor-fundo-fluxograma-inicio), var(--cor-fundo-fluxograma-fim));
+  border-radius: 0.5rem; 
+  padding: 2rem; 
+}
+
+.fluxograma-titulo {
+  font-size: 1.25rem;
+  font-weight: 600; 
+  color: var(--cor-texto-titulo);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.fluxograma-passos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
   .fluxograma-passos-container {
-    display: flex;
-    flex-direction: column; /* flex-col (default) */
-    align-items: center;
-    justify-content: center;
-    gap: 1rem; /* space-y-4 */
+    flex-direction: row;
+    gap: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
-  
-  /* Configuração para telas maiores (md) */
-  @media (min-width: 768px) {
-    .fluxograma-passos-container {
-      flex-direction: row; /* md:flex-row */
-      gap: 0;
-      margin-left: 2rem; /* md:space-x-8 - implementando com margin */
-      margin-right: 2rem; /* md:space-x-8 - implementando com margin */
-      /* Usando justify-content: space-between; ou gap para espaçar */
-    }
-  
-    .fluxograma-seta {
-      margin: 0 1rem; /* Espaço entre os blocos e as setas */
-    }
-  }
-  
-  /* Estilo do bloco de cada passo */
-  .fluxograma-bloco {
-    background-color: var(--cor-fundo-cartao);
-    border-radius: 0.5rem; /* rounded-lg */
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-md */
-    padding: 1.5rem; /* p-6 */
-    text-align: center;
-    min-width: 150px; /* min-w-[150px] */
-  }
-  
-  /* Título do bloco (nome da tecnologia) */
-  .fluxograma-bloco-titulo {
-    font-weight: 600; /* font-semibold */
-    color: var(--cor-texto-titulo);
-  }
-  
-  /* Subtítulo do bloco (descrição) */
-  .fluxograma-bloco-descricao {
-    font-size: 0.875rem; /* text-sm */
-    color: #4b5563; /* gray-600 */
-    margin-top: 0.5rem; /* mt-2 */
-  }
-  
-  /* Seta de fluxo */
+
   .fluxograma-seta {
-    width: 2rem; /* w-8 */
-    height: 2rem; /* h-8 */
-    color: var(--cor-seta);
-    transform: rotate(90deg); /* rotate-90 */
+    margin: 0 1rem;
   }
-  
-  /* Configuração da seta para telas maiores */
-  @media (min-width: 768px) {
-    .fluxograma-seta {
-      transform: rotate(0deg); /* md:rotate-0 */
-    }
+}
+
+.fluxograma-bloco {
+  background-color: var(--cor-fundo-cartao);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  text-align: center;
+  min-width: 150px;
+}
+
+.fluxograma-bloco-titulo {
+  font-weight: 600;
+  color: var(--cor-texto-titulo);
+}
+
+.fluxograma-bloco-descricao {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-top: 0.5rem;
+}
+
+.fluxograma-seta {
+  width: 2rem;
+  height: 2rem;
+  color: var(--cor-seta);
+  transform: rotate(90deg);
+}
+
+@media (min-width: 768px) {
+  .fluxograma-seta {
+    transform: rotate(0deg);
   }
+}
