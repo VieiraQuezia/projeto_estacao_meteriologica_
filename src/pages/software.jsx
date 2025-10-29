@@ -1,7 +1,8 @@
 import React from 'react';
 import { Code, Settings, Upload } from 'lucide-react';
+import './css/software.css';
 
-export function Software() {
+export default function Software() {
   const codeExample = `#include <WiFi.h>
 #include <PubSubClient.h>
 #include <DHT.h>
