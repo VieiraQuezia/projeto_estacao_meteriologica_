@@ -1,18 +1,7 @@
-:root {
-  --cor-fundo-principal: #f9fafb;
-  --cor-fundo-cartao: #ffffff;
-  --cor-texto-titulo: #111827;
-  --cor-texto-principal: #374151;
-  --cor-fundo-imagem: #f3f4f6;
-  --cor-icone-principal: #2563eb;
-  --cor-botao: #2563eb;
-  --cor-botao-hover: #1d4ed8;
-}
-
 .simulacao-container {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--cor-fundo-principal);
+  background-color: #f9fafb;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
@@ -28,13 +17,13 @@
 .simulacao-titulo-principal {
   font-size: 2.25rem;
   font-weight: 700;
-  color: var(--cor-texto-titulo);
+  color: #111827;
   margin-bottom: 3rem;
   text-align: center;
 }
 
 .simulacao-cartao {
-  background-color: var(--cor-fundo-cartao);
+  background-color: #ffffff;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   padding: 2rem;
@@ -50,18 +39,18 @@
 .simulacao-icone {
   width: 2rem;
   height: 2rem;
-  color: var(--cor-icone-principal);
+  color: #2563eb;
   margin-right: 1rem;
 }
 
 .simulacao-titulo-secundario {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--cor-texto-titulo);
+  color: #111827;
 }
 
 .simulacao-imagem-container {
-  background-color: var(--cor-fundo-imagem);
+  background-color: #f3f4f6;
   border-radius: 0.5rem;
   padding: 2rem;
   margin-bottom: 1.5rem;
@@ -74,7 +63,7 @@
 }
 
 .simulacao-conteudo-texto {
-  color: var(--cor-texto-principal);
+  color: #374151;
 }
 
 .simulacao-paragrafo {
@@ -86,7 +75,7 @@
 .simulacao-subtitulo {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--cor-texto-titulo);
+  color:#111827;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -112,8 +101,8 @@
   display: inline-flex;
   align-items: center;
   padding: 0.75rem 1.5rem;
-  background-color: var(--cor-botao);
-  color: var(--cor-fundo-cartao);
+  background-color: #2563eb;
+  color: var(#ffffff);
   font-weight: 600;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -121,7 +110,7 @@
 }
 
 .simulacao-botao:hover {
-  background-color: var(--cor-botao-hover);
+  background-color:#1d4ed8;
 }
 
 .simulacao-botao-icone {

@@ -1,19 +1,7 @@
-:root {
-    --cor-fundo-principal: #f9fafb;
-    --cor-fundo-cartao: #ffffff;
-    --cor-texto-titulo: #111827;
-    --cor-texto-principal: #4b5563;
-    --cor-verde-icone: #059669;
-    --cor-azul-icone: #2563eb;
-    --cor-fundo-video: #f3f4f6;
-    --cor-conclusao-inicio: #2563eb;
-    --cor-conclusao-fim: #10b981;
-  }
-  
   .resultados-container {
     width: 100%;
     min-height: 100vh;
-    background-color: var(--cor-fundo-principal);
+    background-color:#f9fafb;
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
@@ -29,13 +17,13 @@
   .resultados-titulo-principal {
     font-size: 2.25rem;
     font-weight: 700;
-    color: var(--cor-texto-titulo);
+    color: #111827;
     margin-bottom: 3rem;
     text-align: center;
   }
   
   .resultados-cartao {
-    background-color: var(--cor-fundo-cartao);
+    background-color: #ffffff;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     padding: 2rem;
@@ -55,17 +43,17 @@
   }
   
   .resultados-icone-aprendizados {
-    color: var(--cor-verde-icone);
+    color: #059669;
   }
   
   .resultados-icone-projeto {
-    color: var(--cor-azul-icone);
+    color: #2563eb;
   }
   
   .resultados-titulo-secao {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--cor-texto-titulo);
+    color: #111827;
   }
   
   .aprendizados-lista-container {
@@ -89,13 +77,13 @@
   .aprendizados-icone-check {
     width: 1.25rem;
     height: 1.25rem;
-    color: var(--cor-verde-icone);
+    color: #059669;
     margin-top: 0.25rem;
     flex-shrink: 0;
   }
   
   .aprendizados-texto {
-    color: var(--cor-texto-principal);
+    color: #4b5563;
   }
   
   .projeto-funcionamento-grid {
@@ -114,7 +102,7 @@
   .subtitulo-secao {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--cor-texto-titulo);
+    color: #111827;
     margin-bottom: 1rem;
   }
   
@@ -125,12 +113,12 @@
   }
   
   .legenda-projeto {
-    color: var(--cor-texto-principal);
+    color: #4b5563;
     margin-top: 1rem;
   }
   
   .demonstracao-secao {
-    background-color: var(--cor-fundo-video);
+    background-color: #f3f4f6;
     border-radius: 0.5rem;
     padding: 1.5rem;
   }
@@ -169,7 +157,7 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     color: #ffffff;
-    background-image: linear-gradient(to right, var(--cor-conclusao-inicio), var(--cor-conclusao-fim));
+    background-image: linear-gradient(to right, #2563eb), var(#10b981);
   }
   
   .conclusao-titulo {
